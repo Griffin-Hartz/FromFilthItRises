@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - EnvironmentTag
+  - Boundary
   layers:
   - Default
   - TransparentFX

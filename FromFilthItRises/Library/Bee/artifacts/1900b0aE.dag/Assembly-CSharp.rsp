@@ -393,7 +393,9 @@
 "Assets/Mobile/Scripts/VirtualInputs/UIVirtualJoystick.cs"
 "Assets/Mobile/Scripts/VirtualInputs/UIVirtualTouchZone.cs"
 "Assets/Scripts/BasicRigidBodyPush.cs"
+"Assets/Scripts/EnemyAgent.cs"
 "Assets/Scripts/FirstPersonController.cs"
+"Assets/Scripts/PlayerAgent.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

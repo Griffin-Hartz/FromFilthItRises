@@ -1,0 +1,34 @@
+To do training:
+conda activate ml-agents-2.0
+ make duplicates of training space prefab and space them out
+make sure the version you have in trainer_config.yaml (i.e. "Hummingbird") matches what you have in the behavior parameters script
+mlagents-learn -h
+have training scene ready to go
+make sure behavior type is set to default
+check training mode in the agent script
+have a decision requester on the agent
+mlagents-learn ./trainer_config.yaml --run-id hb_01 (in directory with that file)
+	instead of hb_01, it would be...?
+go to Unity and press play (have nothing clicked in anaconda, hit enter)
+ignore error messages?
+let it go for a while
+watch mean reward
+if you highlight something in anaconda it will pause. hit enter to resume
+can adjust unity's maximum particle timestep in TIME
+TENSORBOARD:
+	will need another anaconda window
+	conda env list
+	conda activate ml-agents-2.0
+	go to training directory
+	tensorboard --logdir summaries
+	localhost6006
+	will give data about training
+make sure to give enough man steps to properly train
+can check for plateu in tensorboard
+can stop either with cntrl c in anaconda or play in unity
+the neural network (.nn file), go to models
+put it in the unity project
+put it in the model field of behavior parameters
+make sure to save checkpoints, and make a note of what you changed on a training run when it works well
+
+

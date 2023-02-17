@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
@@ -49,6 +51,8 @@ public class EnemyAgent : Agent
     // Whether the agent is frozen (intentionally not flying)
     private bool frozen = false;
 
+    EnvironmentParameters defaultParameters;
+
     /// <summary>
     /// The amount of target the agent has obtained this episode
     /// </summary>
@@ -64,6 +68,8 @@ public class EnemyAgent : Agent
 
         // If not training mode, no max step, play forever
         if (!trainingMode) MaxStep = 0;
+
+        defaultParameters = Academy.Instance.EnvironmentParameters;
     }
 
     /// <summary>
@@ -76,7 +82,7 @@ public class EnemyAgent : Agent
 
         // Reset player health
         // playerHealth = 0f;
-
+        Debug.Log("resetting player");
         // Zero out velocities so that movement stops before a new episode begins
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
@@ -106,6 +112,8 @@ public class EnemyAgent : Agent
     /// <param name="vectorAction">The actions to take</param>
     public void OnActionReceived(float[] vectorAction)
     {
+        Debug.Log("Actionrecieved: " + vectorAction.ToString());
+        
         // Don't take actions if frozen
         if (frozen) return;
 
@@ -139,11 +147,47 @@ public class EnemyAgent : Agent
     }
 
     /// <summary>
+    /// So the lowdown on this method is that actionbuffers are essentially choices that the agent can make
+    /// 
+    /// </summary>
+    /// <param name="actions"></param>
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        // Convert the first action to forward movement
+        float forwardAmount = actions.DiscreteActions[0];
+
+        // Convert the second action to turning left or right
+        float turnAmount = 0f;
+
+        //gives array out of bounds error?
+        /*if (actions.DiscreteActions[1] == 1f)
+        {
+            turnAmount = -1f;
+        }
+        else if (actions.DiscreteActions[1] == 2f)
+        {
+            turnAmount = 1f;
+        }*/
+
+        int moveSpeed = 1;
+        int turnSpeed = 1;
+
+        // Apply movement
+        rigidbody.MovePosition(transform.position + transform.forward * forwardAmount * moveSpeed * Time.fixedDeltaTime);
+        transform.Rotate(transform.up * turnAmount * turnSpeed * Time.fixedDeltaTime);
+
+        // Apply a tiny negative reward every step to encourage action
+        if (MaxStep > 0) AddReward(-1f / MaxStep);
+    }
+
+    /// <summary>
     /// Collect vector observations from the environment
     /// </summary>
     /// <param name="sensor">The vector sensor</param>
     public override void CollectObservations(VectorSensor sensor)
     {
+        Debug.Log("Collecting observations");
+
         // If nearestPlayer is null, observe an empty array and return early
         if (nearestPlayer == null)
         {
@@ -250,6 +294,7 @@ public class EnemyAgent : Agent
     /// <param name="inFrontOfPlayer">Whether to choose a spot in front of a player</param>
     private void MoveToSafeRandomPosition(bool inFrontOfPlayer)
     {
+        Debug.Log("Moving to a safe random position. Infrontofplayer: " + inFrontOfPlayer);
         bool safePositionFound = false;
         int attemptsRemaining = 100; // Prevent an infinite loop
         Vector3 potentialPosition = Vector3.zero;

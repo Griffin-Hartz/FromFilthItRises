@@ -11,3 +11,5 @@ EditorBuildSettings:
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
+    com.unity.ml-agents.settings: {fileID: 11400000, guid: 1141a84e86c129c42bb49fc6600fe385,
+      type: 2}

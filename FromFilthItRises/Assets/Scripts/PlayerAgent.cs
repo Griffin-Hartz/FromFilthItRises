@@ -67,7 +67,8 @@ public class PlayerAgent : MonoBehaviour
     public void Kill()
     {
         playerMaterial.SetColor("_BaseColor", emptyPlayerColor);
-        isAlive = false; 
+        isAlive = false;
+        Debug.Log("Killed player");
     }
 
     /// <summary>

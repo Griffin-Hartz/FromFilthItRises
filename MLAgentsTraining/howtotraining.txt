@@ -3,6 +3,11 @@ conda activate ml-agents-2.0
  make duplicates of training space prefab and space them out
 make sure the version you have in trainer_config.yaml (i.e. "Hummingbird") matches what you have in the behavior parameters script
 mlagents-learn -h
+
+mlagents-learn trainer_config.yaml --run-id ID_NAME
+
+
+
 have training scene ready to go
 make sure behavior type is set to default
 check training mode in the agent script

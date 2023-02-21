@@ -110,7 +110,7 @@ public class EnemyAgent : Agent
     /// Index 4: yaw angle (+1 = turn right, -1 = turn left)
     /// </summary>
     /// <param name="vectorAction">The actions to take</param>
-    public void OnActionReceived(float[] vectorAction)
+    /*public void OnActionReceived(float[] vectorAction)
     {
         Debug.Log("Actionrecieved: " + vectorAction.ToString());
         
@@ -144,7 +144,7 @@ public class EnemyAgent : Agent
 
         // Apply the new rotation
         transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
-    }
+    }*/
 
     /// <summary>
     /// So the lowdown on this method is that actionbuffers are essentially choices that the agent can make
@@ -153,6 +153,21 @@ public class EnemyAgent : Agent
     /// <param name="actions"></param>
     public override void OnActionReceived(ActionBuffers actions)
     {
+        Debug.Log("Actionrecieved: " + actions.ToString());
+
+        //Vector3 move = new Vector3(actions.DiscreteActions[0], 0,0);
+        Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
+
+        Debug.Log(actions.ContinuousActions[0] + "continuous");
+
+
+        //Vector3 move = new Vector3(actions.DiscreteActions[0], actions.DiscreteActions[1], actions.DiscreteActions[2]);
+
+        // Add force in the direction of the move vector
+        rigidbody.AddForce(move * moveForce);
+        //transform.Translate(move * moveForce);
+
+        /*
         // Convert the first action to forward movement
         float forwardAmount = actions.DiscreteActions[0];
 
@@ -160,14 +175,14 @@ public class EnemyAgent : Agent
         float turnAmount = 0f;
 
         //gives array out of bounds error?
-        /*if (actions.DiscreteActions[1] == 1f)
+        if (actions.DiscreteActions[1] == 1f)
         {
             turnAmount = -1f;
         }
         else if (actions.DiscreteActions[1] == 2f)
         {
             turnAmount = 1f;
-        }*/
+        }
 
         int moveSpeed = 1;
         int turnSpeed = 1;
@@ -177,7 +192,7 @@ public class EnemyAgent : Agent
         transform.Rotate(transform.up * turnAmount * turnSpeed * Time.fixedDeltaTime);
 
         // Apply a tiny negative reward every step to encourage action
-        if (MaxStep > 0) AddReward(-1f / MaxStep);
+        if (MaxStep > 0) AddReward(-1f / MaxStep);*/
     }
 
     /// <summary>
@@ -186,11 +201,12 @@ public class EnemyAgent : Agent
     /// <param name="sensor">The vector sensor</param>
     public override void CollectObservations(VectorSensor sensor)
     {
-        Debug.Log("Collecting observations");
+        //Debug.Log("Collecting observations");
 
         // If nearestPlayer is null, observe an empty array and return early
         if (nearestPlayer == null)
         {
+            Debug.Log("return early observation, player null");
             sensor.AddObservation(new float[10]);
             return;
         }
@@ -200,6 +216,7 @@ public class EnemyAgent : Agent
 
         // Get a vector from the claw to the nearest player
         Vector3 toPlayer = nearestPlayer.PlayerCenterPosition - claw.position;
+        //Debug.Log("To player: " + toPlayer);
 
         // Observe a normalized vector pointing to the nearest player (3 observations)
         sensor.AddObservation(toPlayer.normalized);
@@ -265,6 +282,11 @@ public class EnemyAgent : Agent
         actionsOut[2] = combined.z;
         actionsOut[3] = pitch;
         actionsOut[4] = yaw;
+    }
+
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        base.Heuristic(actionsOut);
     }
 
     /// <summary>
@@ -372,14 +394,15 @@ public class EnemyAgent : Agent
     /// <param name="collider">The trigger collider</param>
     private void TriggerEnterOrStay(Collider collider)
     {
+        Debug.Log("Collision with " + collider.tag);
         // Check if agent is colliding with target
-        if (collider.CompareTag("target"))
+        if (collider.CompareTag("Player"))
         {
-            Vector3 closestPointToBeakTip = collider.ClosestPoint(claw.position);
+            Vector3 closestPointToClaw = collider.ClosestPoint(claw.position);
 
             // Check if the closest collision point is close to the claw
             // Note: a collision with anything but the claw should not count
-            if (Vector3.Distance(claw.position, closestPointToBeakTip) < BeakTipRadius)
+            if (Vector3.Distance(claw.position, closestPointToClaw) < BeakTipRadius)
             {
                 // Look up the player for this target collider
                 //PlayerAgent player = playerArea.GetPlayerFromNectar(collider);

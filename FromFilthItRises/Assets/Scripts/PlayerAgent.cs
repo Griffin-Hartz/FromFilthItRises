@@ -21,7 +21,7 @@ public class PlayerAgent : MonoBehaviour
     [SerializeField] private Material playerMaterial;
 
     //Is the player alive
-    private bool isAlive;
+    [SerializeField] private bool isAlive;
 
     /// <summary>
     /// A vector pointing straight out of the player

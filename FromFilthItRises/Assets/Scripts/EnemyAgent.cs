@@ -5,6 +5,7 @@ using System.Linq;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -29,6 +30,17 @@ public class EnemyAgent : Agent
 
     [Tooltip("Whether this is training mode or gameplay mode")]
     public bool trainingMode;
+
+    [Tooltip("The color when the run is valid")]
+    public Color validColor = new Color(0f, 0f, 1f);
+
+    [Tooltip("The color when the run is invalid")]
+    public Color invalidColor = new Color(1f, 0f, 0f);
+
+    [SerializeField] private Material enemyMaterial;
+
+    //Disables run if spawns on top of player
+    private bool validRun = true;
 
     // The rigidbody of the agent
     new private Rigidbody rigidbody;
@@ -94,57 +106,19 @@ public class EnemyAgent : Agent
             // Spawn in front of player 50% of the time during training
             inFrontOfPlayer = UnityEngine.Random.value > .5f;
         }
-
+        validRun = true;
         // Move the agent to a new random position
         MoveToSafeRandomPosition(inFrontOfPlayer);
+        Debug.Log("valid: " + validRun);
+        if (validRun)
+        {
+            enemyMaterial.SetColor("_BaseColor", validColor);
+        }
+        else
+        {
+            enemyMaterial.SetColor("_BaseColor", invalidColor);
+        }
     }
-
-    /// <summary>
-    /// Called when and action is received from either the player input or the neural network
-    /// 
-    /// vectorAction[i] represents:
-    /// Index 0: move vector x (+1 = right, -1 = left)
-    /// Index 1: move vector y (+1 = up, -1 = down)
-    /// Index 2: move vector z (+1 = forward, -1 = backward)
-    /// Index 3: pitch angle (+1 = pitch up, -1 = pitch down)
-    /// Index 4: yaw angle (+1 = turn right, -1 = turn left)
-    /// </summary>
-    /// <param name="vectorAction">The actions to take</param>
-    /*public void OnActionReceived(float[] vectorAction)
-    {
-        Debug.Log("Actionrecieved: " + vectorAction.ToString());
-        
-        // Don't take actions if frozen
-        if (frozen) return;
-
-        // Calculate movement vector
-        Vector3 move = new Vector3(vectorAction[0], vectorAction[1], vectorAction[2]);
-
-        // Add force in the direction of the move vector
-        rigidbody.AddForce(move * moveForce);
-
-        // Get the current rotation
-        Vector3 rotationVector = transform.rotation.eulerAngles;
-
-        // Calculate pitch and yaw rotation
-        float pitchChange = vectorAction[3];
-        float yawChange = vectorAction[4];
-
-        // Calculate smooth rotation changes
-        smoothPitchChange = Mathf.MoveTowards(smoothPitchChange, pitchChange, 2f * Time.fixedDeltaTime);
-        smoothYawChange = Mathf.MoveTowards(smoothYawChange, yawChange, 2f * Time.fixedDeltaTime);
-
-        // Calculate new pitch and yaw based on smoothed values
-        // Clamp  pitch to avoid flipping upside down
-        float pitch = rotationVector.x + smoothPitchChange * Time.fixedDeltaTime * pitchSpeed;
-        if (pitch > 180f) pitch -= 360f;
-        pitch = Mathf.Clamp(pitch, -MaxPitchAngle, MaxPitchAngle);
-
-        float yaw = rotationVector.y + smoothYawChange * Time.fixedDeltaTime * yawSpeed;
-
-        // Apply the new rotation
-        transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
-    }*/
 
     /// <summary>
     /// So the lowdown on this method is that actionbuffers are essentially choices that the agent can make
@@ -153,12 +127,12 @@ public class EnemyAgent : Agent
     /// <param name="actions"></param>
     public override void OnActionReceived(ActionBuffers actions)
     {
-        Debug.Log("Actionrecieved: " + actions.ToString());
+        //Debug.Log("Actionrecieved: " + actions.ToString());
 
         //Vector3 move = new Vector3(actions.DiscreteActions[0], 0,0);
         Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
 
-        Debug.Log(actions.ContinuousActions[0] + "continuous");
+        //Debug.Log(actions.ContinuousActions[0] + "continuous");
 
 
         //Vector3 move = new Vector3(actions.DiscreteActions[0], actions.DiscreteActions[1], actions.DiscreteActions[2]);
@@ -364,11 +338,18 @@ public class EnemyAgent : Agent
         }
 
         Debug.Assert(safePositionFound, "Could not find a safe position to spawn");
-
+        validRun = safePositionFound;
         // Set the position and rotation
         transform.position = potentialPosition;
         transform.rotation = potentialRotation;
     }
+
+    /*public void OnCollisionEnter(Collider collision)
+    {
+        
+    }*/
+
+
 
     /// <summary>
     /// Called when the agent's collider enters a trigger collider
@@ -427,10 +408,17 @@ public class EnemyAgent : Agent
     /// <param name="collision">The collision info</param>
     private void OnCollisionEnter(Collision collision)
     {
-        if (trainingMode && collision.collider.CompareTag("Boundary"))
+        if (trainingMode && collision.collider.CompareTag("Boundary") && validRun)// 
         {
             // Collided with the area boundary, give a negative reward
-            AddReward(-.5f);
+            Debug.Log("Collide with boundary");
+            AddReward(-.1f);
+        }
+        if (trainingMode && collision.collider.CompareTag("Player") && validRun)// && validRun
+        {
+            nearestPlayer.Kill();
+            AddReward(10);
+            Debug.Log("Kill player");
         }
     }
 

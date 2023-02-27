@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4135013735270702856}
   m_Layer: 0
   m_Name: PlayerCameraRoot
-  m_TagString: CinemachineTarget
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5393215578589016640}
   m_Layer: 8
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,6 +362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80acc0704398521478109d3da1541b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullPlayerColor: {r: 1, g: 0, b: 0.3, a: 1}
+  fullPlayerColor: {r: 1, g: 0.025435377, b: 0, a: 1}
   emptyPlayerColor: {r: 0.5, g: 0, b: 1, a: 1}
-  nectarCollider: {fileID: 0}
+  playerCollider: {fileID: 0}
+  playerMaterial: {fileID: 0}
+  isAlive: 0
+  spawnPositions: []

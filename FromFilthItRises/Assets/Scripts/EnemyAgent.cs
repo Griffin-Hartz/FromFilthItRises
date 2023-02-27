@@ -32,10 +32,10 @@ public class EnemyAgent : Agent
     public bool trainingMode;
 
     [Tooltip("The color when the run is valid")]
-    public Color validColor = new Color(0f, 0f, 1f);
+    public Color validColor;
 
     [Tooltip("The color when the run is invalid")]
-    public Color invalidColor = new Color(1f, 0f, 0f);
+    public Color invalidColor;
 
     [SerializeField] private Material enemyMaterial;
 
@@ -344,18 +344,11 @@ public class EnemyAgent : Agent
         transform.rotation = potentialRotation;
     }
 
-    /*public void OnCollisionEnter(Collider collision)
-    {
-        
-    }*/
-
-
-
     /// <summary>
     /// Called when the agent's collider enters a trigger collider
     /// </summary>
     /// <param name="other">The trigger collider</param>
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         TriggerEnterOrStay(other);
     }
@@ -364,16 +357,16 @@ public class EnemyAgent : Agent
     /// Called when the agent's collider stays in a trigger collider
     /// </summary>
     /// <param name="other">The trigger collider</param>
-    private void OnTriggerStay(Collider other)
+    /private void OnTriggerStay(Collider other)
     {
         TriggerEnterOrStay(other);
-    }
+    }*/
 
     /// <summary>
     /// Handles when the agen'ts collider enters or stays in a trigger collider
     /// </summary>
     /// <param name="collider">The trigger collider</param>
-    private void TriggerEnterOrStay(Collider collider)
+    /*private void TriggerEnterOrStay(Collider collider)
     {
         Debug.Log("Collision with " + collider.tag);
         // Check if agent is colliding with target
@@ -400,7 +393,7 @@ public class EnemyAgent : Agent
                 }
             }
         }
-    }
+    }*/
 
     /// <summary>
     /// Called when the agent collides with something solid
@@ -412,9 +405,15 @@ public class EnemyAgent : Agent
         {
             // Collided with the area boundary, give a negative reward
             Debug.Log("Collide with boundary");
+            AddReward(-.2f);
+        }
+        if (trainingMode && collision.collider.CompareTag("Building") && validRun)// 
+        {
+            // Collided with the area boundary, give a negative reward
+            Debug.Log("Collide with building");
             AddReward(-.1f);
         }
-        if (trainingMode && collision.collider.CompareTag("Player") && validRun)// && validRun
+        if (trainingMode && collision.collider.CompareTag("Player") && validRun && nearestPlayer.isAlive)// && validRun
         {
             nearestPlayer.Kill();
             AddReward(10);

@@ -8,6 +8,7 @@ TagManager:
   - EnvironmentTag
   - Boundary
   - Floor
+  - Building
   layers:
   - Default
   - TransparentFX

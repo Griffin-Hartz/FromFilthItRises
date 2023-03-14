@@ -106,7 +106,7 @@ public class EnemyAgent : Agent
             // Spawn in front of player 50% of the time during training
             inFrontOfPlayer = UnityEngine.Random.value > .5f;
         }
-        validRun = true;
+        //validRun = true;
         // Move the agent to a new random position
         MoveToSafeRandomPosition(inFrontOfPlayer);
         Debug.Log("valid: " + validRun);
@@ -303,7 +303,7 @@ public class EnemyAgent : Agent
             if (inFrontOfPlayer)
             {
                 // Position 10 to 20 cm in front of the player
-                float distanceFromPlayer = UnityEngine.Random.Range(1f, 2f);
+                float distanceFromPlayer = UnityEngine.Random.Range(3f, 5f);
                 potentialPosition = nearestPlayer.transform.position + nearestPlayer.PlayerUpVector * distanceFromPlayer;
 
                 // Point beak at player (bird's head is center of transform)

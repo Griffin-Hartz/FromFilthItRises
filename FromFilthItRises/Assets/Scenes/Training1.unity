@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 4182527795284621757, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5438799728528859693, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 4182527795284621757, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5438799728528859693, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
@@ -796,7 +796,7 @@ PrefabInstance:
     - target: {fileID: 4182527795284621757, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5438799728528859693, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
@@ -1067,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 4182527795284621757, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5438799728528859693, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
@@ -1176,7 +1176,7 @@ PrefabInstance:
     - target: {fileID: 4182527795284621757, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5438799728528859693, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
@@ -1416,7 +1416,7 @@ PrefabInstance:
     - target: {fileID: 996527157712615947, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.99
+      value: 46.989998
       objectReference: {fileID: 0}
     - target: {fileID: 996527157712615947, guid: 2e693fd3a3077cc4aa260e14869a19ad,
         type: 3}

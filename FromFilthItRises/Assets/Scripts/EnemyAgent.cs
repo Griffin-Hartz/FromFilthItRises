@@ -310,6 +310,7 @@ public class EnemyAgent : Agent
                 // Point beak at player (bird's head is center of transform)
                 Vector3 toPlayer = nearestPlayer.PlayerCenterPosition - potentialPosition;
                 potentialRotation = Quaternion.LookRotation(toPlayer, Vector3.up);
+                potentialRotation = Quaternion.Euler(0,0,0);
             }
             else
             {
@@ -331,7 +332,7 @@ public class EnemyAgent : Agent
 
                 yaw = 0;
 
-                potentialRotation = Quaternion.Euler(pitch, yaw, 0f);
+                potentialRotation = Quaternion.Euler(0, 0, 0f);
             }
 
             // Check to see if the agent will collide with anything

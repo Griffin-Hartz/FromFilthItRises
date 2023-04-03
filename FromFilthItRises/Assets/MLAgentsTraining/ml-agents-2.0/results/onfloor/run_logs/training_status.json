@@ -1,0 +1,29 @@
+{
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\onfloor\\Enemy\\Enemy-0.onnx",
+                "reward": null,
+                "creation_time": 1680562753.8990517,
+                "auxillary_file_paths": [
+                    "results\\onfloor\\Enemy\\Enemy-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\onfloor\\Enemy.onnx",
+            "reward": null,
+            "creation_time": 1680562753.8990517,
+            "auxillary_file_paths": [
+                "results\\onfloor\\Enemy\\Enemy-0.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

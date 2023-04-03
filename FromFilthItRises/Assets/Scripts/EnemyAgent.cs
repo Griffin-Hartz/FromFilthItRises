@@ -92,6 +92,7 @@ public class EnemyAgent : Agent
         if (trainingMode)
             nearestPlayer.ResetPlayer();
 
+        Debug.Log("On episode begin");
         // Reset player health
         // playerHealth = 0f;
         Debug.Log("resetting player");
@@ -327,6 +328,9 @@ public class EnemyAgent : Agent
                 // Choose and set random starting pitch and yaw
                 float pitch = UnityEngine.Random.Range(-60f, 60f);
                 float yaw = UnityEngine.Random.Range(-180f, 180f);
+
+                yaw = 0;
+
                 potentialRotation = Quaternion.Euler(pitch, yaw, 0f);
             }
 

@@ -332,6 +332,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337814169510308722, guid: 30f941ac02e22a94ba65536f50081aa9,
         type: 3}
+      propertyPath: MaxStep
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337814169510308722, guid: 30f941ac02e22a94ba65536f50081aa9,
+        type: 3}
+      propertyPath: trainingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337814169510308722, guid: 30f941ac02e22a94ba65536f50081aa9,
+        type: 3}
       propertyPath: nearestPlayer
       value: 
       objectReference: {fileID: 1782749521}
@@ -620,29 +630,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2020006015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020006009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47f5834448a1934792b267783ce1997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  moveForce: 2
-  pitchSpeed: 100
-  yawSpeed: 100
-  claw: {fileID: 0}
-  agentCamera: {fileID: 0}
-  trainingMode: 0
-  validColor: {r: 0, g: 0, b: 0, a: 0}
-  invalidColor: {r: 0, g: 0, b: 0, a: 0}
-  enemyMaterial: {fileID: 0}
-  nearestPlayer: {fileID: 0}

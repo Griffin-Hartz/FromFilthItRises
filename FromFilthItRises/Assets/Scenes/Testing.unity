@@ -332,6 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337814169510308722, guid: 30f941ac02e22a94ba65536f50081aa9,
         type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 1431566253}
+    - target: {fileID: 5337814169510308722, guid: 30f941ac02e22a94ba65536f50081aa9,
+        type: 3}
       propertyPath: MaxStep
       value: 8000
       objectReference: {fileID: 0}
@@ -358,6 +363,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6101232352169017626, guid: 30f941ac02e22a94ba65536f50081aa9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30f941ac02e22a94ba65536f50081aa9, type: 3}
+--- !u!1 &1431566253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789498135842315072, guid: 30f941ac02e22a94ba65536f50081aa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1103958567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1525794543
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,22 +2,22 @@
     "Enemy": {
         "checkpoints": [
             {
-                "steps": 0,
-                "file_path": "results\\onfloor\\Enemy\\Enemy-0.onnx",
+                "steps": 3200,
+                "file_path": "results\\onfloor\\Enemy\\Enemy-3200.onnx",
                 "reward": null,
-                "creation_time": 1680562753.8990517,
+                "creation_time": 1680564142.789493,
                 "auxillary_file_paths": [
-                    "results\\onfloor\\Enemy\\Enemy-0.pt"
+                    "results\\onfloor\\Enemy\\Enemy-3200.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 0,
+            "steps": 3200,
             "file_path": "results\\onfloor\\Enemy.onnx",
             "reward": null,
-            "creation_time": 1680562753.8990517,
+            "creation_time": 1680564142.789493,
             "auxillary_file_paths": [
-                "results\\onfloor\\Enemy\\Enemy-0.pt"
+                "results\\onfloor\\Enemy\\Enemy-3200.pt"
             ]
         }
     },

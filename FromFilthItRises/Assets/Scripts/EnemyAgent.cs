@@ -330,9 +330,10 @@ public class EnemyAgent : Agent
                 float pitch = UnityEngine.Random.Range(-60f, 60f);
                 float yaw = UnityEngine.Random.Range(-180f, 180f);
 
+                pitch = 0;
                 yaw = 0;
 
-                potentialRotation = Quaternion.Euler(0, 0, 0f);
+                potentialRotation = Quaternion.Euler(pitch, yaw, 0f);
             }
 
             // Check to see if the agent will collide with anything

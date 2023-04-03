@@ -6,10 +6,11 @@ using UnityEngine;
 public class Mutant : EnemyAgent
 {
     Animator animator;
+    public GameObject model;
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = model.GetComponent<Animator>();
     }
 
     public override void OnActionReceived(ActionBuffers actions)

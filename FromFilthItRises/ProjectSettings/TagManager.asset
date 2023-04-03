@@ -9,6 +9,7 @@ TagManager:
   - Boundary
   - Floor
   - Building
+  - Claw
   layers:
   - Default
   - TransparentFX

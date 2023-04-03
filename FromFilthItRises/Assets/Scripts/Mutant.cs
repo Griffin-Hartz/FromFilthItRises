@@ -15,8 +15,8 @@ public class Mutant : EnemyAgent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        //base.OnActionReceived(actions);
-        Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
-        animator.SetBool("Walk", true);
+        //Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
+        //animator.SetFloat("Speed", actions.ContinuousActions[0]);
+        //animator.SetFloat("Turn", actions.ContinuousActions[1]);
     }
 }

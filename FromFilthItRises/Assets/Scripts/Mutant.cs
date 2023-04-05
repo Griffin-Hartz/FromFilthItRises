@@ -16,7 +16,9 @@ public class Mutant : EnemyAgent
     public override void OnActionReceived(ActionBuffers actions)
     {
         //Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
-        //animator.SetFloat("Speed", actions.ContinuousActions[0]);
-        //animator.SetFloat("Turn", actions.ContinuousActions[1]);
+        animator.SetFloat("Speed", actions.ContinuousActions[0]);
+        animator.SetFloat("Turn", actions.ContinuousActions[1]);
     }
+
+    //should add an onepisodebegin clause so that it doesn't spawn on top of player maybe
 }

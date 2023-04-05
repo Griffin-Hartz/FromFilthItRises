@@ -107,7 +107,7 @@ public class EnemyAgent : Agent
             // Spawn in front of player 50% of the time during training
             inFrontOfPlayer = UnityEngine.Random.value > .5f;
         }
-        //validRun = true;
+        // validRun = true;
         // Move the agent to a new random position
         MoveToSafeRandomPosition(inFrontOfPlayer);
         Debug.Log("valid: " + validRun);
@@ -304,13 +304,12 @@ public class EnemyAgent : Agent
             if (inFrontOfPlayer)
             {
                 // Position 10 to 20 cm in front of the player
-                float distanceFromPlayer = UnityEngine.Random.Range(3f, 5f);
+                float distanceFromPlayer = UnityEngine.Random.Range(10f, 15f);
                 potentialPosition = nearestPlayer.transform.position + nearestPlayer.PlayerUpVector * distanceFromPlayer;
 
                 // Point beak at player (bird's head is center of transform)
                 Vector3 toPlayer = nearestPlayer.PlayerCenterPosition - potentialPosition;
-                potentialRotation = Quaternion.LookRotation(toPlayer, Vector3.up);
-                potentialRotation = Quaternion.Euler(0,0,0);
+                //potentialRotation = Quaternion.LookRotation(toPlayer, Vector3.up);
             }
             else
             {
@@ -327,13 +326,10 @@ public class EnemyAgent : Agent
                 potentialPosition = nearestPlayer.transform.position + Vector3.up * height + direction * Vector3.forward * radius;
 
                 // Choose and set random starting pitch and yaw
-                float pitch = UnityEngine.Random.Range(-60f, 60f);
-                float yaw = UnityEngine.Random.Range(-180f, 180f);
+                //float pitch = UnityEngine.Random.Range(-60f, 60f);
+                //float yaw = UnityEngine.Random.Range(-180f, 180f);
 
-                pitch = 0;
-                yaw = 0;
-
-                potentialRotation = Quaternion.Euler(pitch, yaw, 0f);
+                //potentialRotation = Quaternion.Euler(pitch, yaw, 0f);
             }
 
             // Check to see if the agent will collide with anything
@@ -342,6 +338,8 @@ public class EnemyAgent : Agent
             // Safe position has been found if no colliders are overlapped
             safePositionFound = colliders.Length == 0;
         }
+
+        potentialRotation = Quaternion.Euler(0, 0, 0);
 
         Debug.Assert(safePositionFound, "Could not find a safe position to spawn");
         validRun = safePositionFound;

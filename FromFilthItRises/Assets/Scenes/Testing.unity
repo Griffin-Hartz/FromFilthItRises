@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 6343706978018435999, guid: 30f941ac02e22a94ba65536f50081aa9,
         type: 3}
       propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7801639728631882200, guid: 30f941ac02e22a94ba65536f50081aa9,
         type: 3}
@@ -368,6 +368,11 @@ PrefabInstance:
     - target: {fileID: 8407082484880154844, guid: 30f941ac02e22a94ba65536f50081aa9,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407082484880154844, guid: 30f941ac02e22a94ba65536f50081aa9,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

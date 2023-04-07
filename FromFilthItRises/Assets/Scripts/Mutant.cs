@@ -7,11 +7,10 @@ using System;
 public class Mutant : EnemyAgent
 {
     Animator animator;
-    public GameObject model;
     // Start is called before the first frame update
     void Start()
     {
-        animator = model.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     public override void OnActionReceived(ActionBuffers actions)

@@ -1,7 +1,29 @@
 {
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 4511,
+                "file_path": "results\\mutant\\Enemy\\Enemy-4511.onnx",
+                "reward": 0.0,
+                "creation_time": 1680896763.5235171,
+                "auxillary_file_paths": [
+                    "results\\mutant\\Enemy\\Enemy-4511.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4511,
+            "file_path": "results\\mutant\\Enemy.onnx",
+            "reward": 0.0,
+            "creation_time": 1680896763.5235171,
+            "auxillary_file_paths": [
+                "results\\mutant\\Enemy\\Enemy-4511.pt"
+            ]
+        }
+    },
     "metadata": {
         "stats_format_version": "0.3.0",
-        "mlagents_version": "0.29.0",
-        "torch_version": "1.13.1"
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
     }
 }

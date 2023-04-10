@@ -22,7 +22,7 @@ public class Mutant : EnemyAgent
         {
             animator.SetTrigger("Attack");
         }
-        //Debug.Log("Test Speed: " + Math.Round(actions.ContinuousActions[0], 3));
+        Debug.Log("Test Speed: " + Math.Round(actions.ContinuousActions[0], 3));
     }
 
     //should add an onepisodebegin clause so that it doesn't spawn on top of player maybe

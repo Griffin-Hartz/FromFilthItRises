@@ -2,22 +2,22 @@
     "Enemy": {
         "checkpoints": [
             {
-                "steps": 0,
-                "file_path": "results\\mutant\\Enemy\\Enemy-0.onnx",
-                "reward": null,
-                "creation_time": 1681095952.2847373,
+                "steps": 4862,
+                "file_path": "results\\mutant\\Enemy\\Enemy-4862.onnx",
+                "reward": 0.0,
+                "creation_time": 1681097490.0567667,
                 "auxillary_file_paths": [
-                    "results\\mutant\\Enemy\\Enemy-0.pt"
+                    "results\\mutant\\Enemy\\Enemy-4862.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 0,
+            "steps": 4862,
             "file_path": "results\\mutant\\Enemy.onnx",
-            "reward": null,
-            "creation_time": 1681095952.2847373,
+            "reward": 0.0,
+            "creation_time": 1681097490.0567667,
             "auxillary_file_paths": [
-                "results\\mutant\\Enemy\\Enemy-0.pt"
+                "results\\mutant\\Enemy\\Enemy-4862.pt"
             ]
         }
     },

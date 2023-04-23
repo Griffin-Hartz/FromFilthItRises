@@ -335,6 +335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MutantWalk
       objectReference: {fileID: 0}
+    - target: {fileID: 8462994869556877689, guid: 381db8fe8d004094f8b41bc117a755f4,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381db8fe8d004094f8b41bc117a755f4, type: 3}
 --- !u!1001 &1103958567

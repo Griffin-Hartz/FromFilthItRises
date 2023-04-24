@@ -46,7 +46,7 @@ public class EnemyAgent : Agent
     new private Rigidbody rigidbody;
 
     // The nearest player to the agent
-    [SerializeField] private PlayerAgent nearestPlayer;
+    public PlayerAgent nearestPlayer;
 
     // Allows for smoother pitch changes
     private float smoothPitchChange = 0f;
@@ -64,11 +64,6 @@ public class EnemyAgent : Agent
     private bool frozen = false;
 
     EnvironmentParameters defaultParameters;
-
-    /// <summary>
-    /// The amount of target the agent has obtained this episode
-    /// </summary>
-    public float NectarObtained { get; private set; }
 
     /// <summary>
     /// Initialize the agent
@@ -403,7 +398,7 @@ public class EnemyAgent : Agent
     /// Called when the agent collides with something solid
     /// </summary>
     /// <param name="collision">The collision info</param>
-    private void OnCollisionEnter(Collision collision)
+    public virtual void OnCollisionEnter(Collision collision)
     {
         if (trainingMode && collision.collider.CompareTag("Boundary") && validRun)// 
         {
@@ -422,6 +417,7 @@ public class EnemyAgent : Agent
             nearestPlayer.Kill();
             AddReward(10);
             Debug.Log("Kill player");
+            OnEpisodeBegin();
         }
     }
 

@@ -18,20 +18,13 @@ public class Mutant : EnemyAgent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        //Vector3 move = new Vector3(actions.ContinuousActions[0], actions.ContinuousActions[1], actions.ContinuousActions[2]);
         localSpeed = actions.ContinuousActions[0];
         localTurn = actions.ContinuousActions[1];
-        //animator.
-        if (actions.ContinuousActions[2] > 0.99)
-        {
-            attacking = true;
-        }
-        else
-        {
-            attacking = false;
-        }
-        Debug.Log("Test Speed: " + Math.Round(actions.ContinuousActions[0], 3));
+        //My plan is to have a separate, non-ml script on the mutant that will handle things like sounds, the attack animation, etc 
+        //that would be really hard to train the agent to do
     }
+
+    //I wish I could make it reset on player kill
 
     private void FixedUpdate()
     {
@@ -40,8 +33,28 @@ public class Mutant : EnemyAgent
             animator.SetFloat("Speed", localSpeed);
             animator.SetFloat("Turn", localTurn);
         }
-        if (attacking)
+    }
+
+    public override void OnCollisionEnter(Collision collision)
+    {
+        if (trainingMode && collision.collider.CompareTag("Boundary"))// 
         {
+            // Collided with the area boundary, give a negative reward
+            Debug.Log("Collide with boundary");
+            AddReward(-.2f);
+        }
+        if (trainingMode && collision.collider.CompareTag("Building"))// 
+        {
+            // Collided with the area boundary, give a negative reward
+            Debug.Log("Collide with building");
+            AddReward(-.1f);
+        }
+        if (trainingMode && collision.collider.CompareTag("Player") && nearestPlayer.isAlive)// && validRun
+        {
+            nearestPlayer.Kill();
+            AddReward(10);
+            Debug.Log("Kill player");
+            OnEpisodeBegin();
             animator.SetTrigger("Attack");
         }
     }

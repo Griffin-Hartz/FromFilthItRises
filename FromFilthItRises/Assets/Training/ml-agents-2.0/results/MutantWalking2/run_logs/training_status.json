@@ -1,0 +1,29 @@
+{
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 26240,
+                "file_path": "results\\MutantWalking2\\Enemy\\Enemy-26240.onnx",
+                "reward": null,
+                "creation_time": 1682318752.6615922,
+                "auxillary_file_paths": [
+                    "results\\MutantWalking2\\Enemy\\Enemy-26240.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 26240,
+            "file_path": "results\\MutantWalking2\\Enemy.onnx",
+            "reward": null,
+            "creation_time": 1682318752.6615922,
+            "auxillary_file_paths": [
+                "results\\MutantWalking2\\Enemy\\Enemy-26240.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.13.1"
+    }
+}

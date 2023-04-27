@@ -48,6 +48,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.558105
+      objectReference: {fileID: 0}
     - target: {fileID: 7355603859698085994, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
         type: 3}
       propertyPath: m_RootOrder
@@ -123,6 +128,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment.3
       objectReference: {fileID: 0}
+    - target: {fileID: 5734239526847550501, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.43
+      objectReference: {fileID: 0}
     - target: {fileID: 7355603859698085994, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
         type: 3}
       propertyPath: m_RootOrder
@@ -197,6 +207,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Segment.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.558105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294999486381876311, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7355603859698085994, guid: 9a03dec8e2de6d74f9bcd0c3d6e8549e,
         type: 3}

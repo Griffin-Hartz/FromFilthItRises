@@ -93,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ea36314d43a1294e9d580d387a2c4a2, type: 2}
+  - {fileID: 2100000, guid: 8c803d9f10ef48b4fabbb3b330439955, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 6
+  MoveSpeed: 6
+  SprintSpeed: 12
   RotationSpeed: 1
   SpeedChangeRate: 10
   JumpHeight: 1.2
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullPlayerColor: {r: 1, g: 0.025435377, b: 0, a: 1}
   emptyPlayerColor: {r: 0.5, g: 0, b: 1, a: 1}
-  playerCollider: {fileID: 0}
-  playerMaterial: {fileID: 0}
-  isAlive: 0
+  playerCollider: {fileID: 5393215578589016640}
+  playerMaterial: {fileID: 2100000, guid: 8c803d9f10ef48b4fabbb3b330439955, type: 2}
+  isAlive: 1
   spawnPositions: []

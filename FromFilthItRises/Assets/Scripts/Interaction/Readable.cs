@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +7,7 @@ using UnityEngine;
 public class Readable : Interactable
 {
     [SerializeField] private TextMeshProUGUI _textMeshPro;
+    
     public override void Interact()
     {
         _textMeshPro.gameObject.SetActive(true);

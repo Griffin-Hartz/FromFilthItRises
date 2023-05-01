@@ -21,8 +21,8 @@ public abstract class Interactable : MonoBehaviour
         }
         catch (NullReferenceException) { }
 
-        defaultMat = Resources.Load<Material>("Default");
-        interactionMat = Resources.Load<Material>("Interacting");
+        //defaultMat = Resources.Load<Material>("Default");
+        //interactionMat = Resources.Load<Material>("Interacting");
     }
 
     public virtual void OnTriggerStay(Collider other)

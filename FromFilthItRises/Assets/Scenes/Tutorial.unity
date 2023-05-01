@@ -375,7 +375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &214737594
 Light:
   m_ObjectHideFlags: 0
@@ -463,6 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223404012}
   - component: {fileID: 223404013}
+  - component: {fileID: 223404014}
   m_Layer: 8
   m_Name: OpenGate
   m_TagString: Untagged
@@ -498,6 +499,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 3.4895496}
   m_Center: {x: 0, y: 0, z: 1.2447748}
+--- !u!114 &223404014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223404011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac6bf95bdc957f4284437a823ac2e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 223404013}
+  defaultMat: {fileID: 2100000, guid: afcb28a08e368064fbd354bc421a8e89, type: 2}
+  interactionMat: {fileID: 2100000, guid: 3095ddc1f850f2a4a982d84423ae0595, type: 2}
+  needsToggled: 1
+  gate: {fileID: 966554777}
+  tm: {fileID: 1261409702}
 --- !u!1001 &261798883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2617,7 +2636,6 @@ GameObject:
   - component: {fileID: 966554781}
   - component: {fileID: 966554780}
   - component: {fileID: 966554779}
-  - component: {fileID: 966554782}
   m_Layer: 8
   m_Name: FirstGate
   m_TagString: Untagged
@@ -2705,23 +2723,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966554777}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &966554782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966554777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6bf95bdc957f4284437a823ac2e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 223404013}
-  defaultMat: {fileID: 2100000, guid: afcb28a08e368064fbd354bc421a8e89, type: 2}
-  interactionMat: {fileID: 2100000, guid: 3095ddc1f850f2a4a982d84423ae0595, type: 2}
-  needsToggled: 1
-  gate: {fileID: 966554777}
 --- !u!1001 &968934458
 PrefabInstance:
   m_ObjectHideFlags: 0

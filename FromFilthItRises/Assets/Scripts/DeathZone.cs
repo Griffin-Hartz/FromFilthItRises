@@ -8,7 +8,6 @@ public class DeathZone : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("Collision");
             Player player = other.GetComponent<Player>();
             player.Spawn();
         }

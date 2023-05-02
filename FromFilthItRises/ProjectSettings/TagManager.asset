@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Building
   - Claw
+  - Item
   layers:
   - Default
   - TransparentFX

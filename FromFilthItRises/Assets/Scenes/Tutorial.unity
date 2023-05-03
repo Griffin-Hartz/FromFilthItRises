@@ -3266,12 +3266,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
---- !u!20 &1097292367 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1973498306410901812, guid: 0624bd641ad450c42b61ee42af18aae5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054238809}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1099284112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3351,6 +3345,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7691020408778584523, guid: aba4a6bee5e734d409f38e39870c3269,
     type: 3}
   m_PrefabInstance: {fileID: 1099284112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1139083453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5082673842549269639, guid: 0624bd641ad450c42b61ee42af18aae5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2054238809}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158408805
 PrefabInstance:
@@ -5806,6 +5806,11 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 970379077}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: inFrontOfPlayer
+      value: 
+      objectReference: {fileID: 1139083453}
     - target: {fileID: 7474859155587246603, guid: 0624bd641ad450c42b61ee42af18aae5,
         type: 3}
       propertyPath: m_RootOrder
@@ -5875,7 +5880,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1097292367}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0624bd641ad450c42b61ee42af18aae5, type: 3}
 --- !u!4 &2082134539 stripped

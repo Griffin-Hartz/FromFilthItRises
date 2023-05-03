@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Transform spawn;
     private RaycastHit hitData;
-
+    private bool isCarrying = false;
+    private PickUp carriedItem;
+    [SerializeField] private Transform inFrontOfPlayer;
     public void Spawn()
     {
         //transform.position = spawn.position;
@@ -17,6 +19,15 @@ public class Player : MonoBehaviour
     public void Carry(PickUp item)
     {
         Debug.Log("Picked up: " + item.name);
+        isCarrying = true;
+        carriedItem = item;
+    }
+
+    public void Drop(PickUp item)
+    {
+        Debug.Log("Dropped: " + item.name);
+        isCarrying = false;
+        carriedItem = null;
     }
 
     private void Update()
@@ -32,6 +43,10 @@ public class Player : MonoBehaviour
             {
                 Carry(hitData.transform.gameObject.GetComponent<PickUp>());
             }
+        }
+        else if (isCarrying)
+        {
+            carriedItem.gameObject.transform.position = inFrontOfPlayer.position;
         }
     }
 }

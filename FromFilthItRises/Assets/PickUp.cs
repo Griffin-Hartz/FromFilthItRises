@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private Light lightSource;
+    public bool glowing;
+
+    public void StartGlow()
     {
-        //make it glow if the player mouses over it
+        glowing = true;
+        lightSource.enabled = true;
     }
+
+    public void StopGlow()
+    {
+        glowing = false;
+        lightSource.enabled = false;
+    }
+
 }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private RaycastHit hitData;
     private bool isCarrying = false;
     private PickUp carriedItem;
+    private PickUp lastSeenPickup; 
     [SerializeField] private Transform inFrontOfPlayer;
     public void Spawn()
     {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         Debug.Log("Picked up: " + item.name);
         isCarrying = true;
         carriedItem = item;
+        item.StopGlow();
     }
 
     public void Drop(PickUp item)
@@ -32,16 +34,35 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 10);
+        Physics.Raycast(ray, out hitData);
+        if (!isCarrying && hitData.collider.tag == "Item")
+        {
+            lastSeenPickup = hitData.transform.gameObject.GetComponent<PickUp>();             
+            
+            if(!lastSeenPickup.glowing)
+                lastSeenPickup.StartGlow();
+        }
+        else if(lastSeenPickup != null)
+        {
+            lastSeenPickup.StopGlow();
+            lastSeenPickup = null;
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Grabbing");
-            //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.DrawRay(ray.origin, ray.direction * 10);
-            Physics.Raycast(ray, out hitData);
-            if(hitData.collider.tag == "Item")
+            if (isCarrying)
             {
-                Carry(hitData.transform.gameObject.GetComponent<PickUp>());
+                Drop(carriedItem);
+            }
+            else
+            {
+                if (hitData.collider.tag == "Item")
+                {
+                    Carry(hitData.transform.gameObject.GetComponent<PickUp>());
+                }
             }
         }
         else if (isCarrying)

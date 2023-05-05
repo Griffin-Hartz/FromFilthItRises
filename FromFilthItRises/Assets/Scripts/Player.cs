@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform spawn;
+    [SerializeField] private Transform inFrontOfPlayer;
+    [SerializeField] private float throwForce = 1f;
+    [SerializeField] private float floatOffset = 1f;
+    [SerializeField] private float grabDistance = 1f;
+    [SerializeField] private bool isCarrying = false;
+    public Vector3 objectPosition;
+    private Ray lookRay;
     private RaycastHit hitData;
-    private bool isCarrying = false;
     private PickUp carriedItem;
     private PickUp lastSeenPickup; 
-    [SerializeField] private Transform inFrontOfPlayer;
     public void Spawn()
     {
         //transform.position = spawn.position;
@@ -32,12 +37,19 @@ public class Player : MonoBehaviour
         carriedItem = null;
     }
 
+    public void Throw(PickUp item)
+    {
+        Debug.Log("Threw: " + item.name);
+        Drop(item);
+        item.gameObject.GetComponent<Rigidbody>().AddForce(lookRay.direction*throwForce, ForceMode.Impulse);
+    }
+
     private void Update()
     {
         //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 10);
-        Physics.Raycast(ray, out hitData);
+        lookRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(lookRay.origin, lookRay.direction * grabDistance);
+        Physics.Raycast(lookRay, out hitData);
         if (!isCarrying && hitData.collider.tag == "Item")
         {
             lastSeenPickup = hitData.transform.gameObject.GetComponent<PickUp>();             
@@ -65,9 +77,19 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (isCarrying)
+            {
+                Throw(carriedItem);
+            }
+        }
         else if (isCarrying)
         {
-            carriedItem.gameObject.transform.position = inFrontOfPlayer.position;
+            //make this better so it moves around in front of them
+            objectPosition = Camera.main.transform.position + Camera.main.transform.forward*floatOffset;
+            //objectPosition.y = carryHeightOffset;
+            carriedItem.gameObject.transform.position = objectPosition;
         }
     }
 }

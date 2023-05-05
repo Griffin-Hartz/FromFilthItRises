@@ -5687,9 +5687,29 @@ PrefabInstance:
       objectReference: {fileID: 970379077}
     - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
         type: 3}
+      propertyPath: throwForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: floatOffset
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: grabDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
       propertyPath: inFrontOfPlayer
       value: 
       objectReference: {fileID: 1139083453}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: carryHeightOffset
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7474859155587246603, guid: 0624bd641ad450c42b61ee42af18aae5,
         type: 3}
       propertyPath: m_RootOrder

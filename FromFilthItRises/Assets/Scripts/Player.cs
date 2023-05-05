@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform spawn;
-    [SerializeField] private Transform inFrontOfPlayer;
+    [Header("Interaction")]
+    public Vector3 objectPosition;
     [SerializeField] private float throwForce = 1f;
     [SerializeField] private float floatOffset = 1f;
     [SerializeField] private float grabDistance = 1f;
     [SerializeField] private bool isCarrying = false;
-    public Vector3 objectPosition;
+    [Header("Movement")]
+    [SerializeField] private float regMoveSpeed = 4f;
+    [SerializeField] private float slowedMoveSpeed = 2f;
+    [SerializeField] private Transform spawn;
     private Ray lookRay;
     private RaycastHit hitData;
     private PickUp carriedItem;
-    private PickUp lastSeenPickup; 
+    private PickUp lastSeenPickup;
+    private FirstPersonController firstPersonController;
+
+    private void Start()
+    {
+        firstPersonController = GetComponent<FirstPersonController>();
+    }
+
     public void Spawn()
     {
         //transform.position = spawn.position;
@@ -90,6 +101,15 @@ public class Player : MonoBehaviour
             objectPosition = Camera.main.transform.position + Camera.main.transform.forward*floatOffset;
             //objectPosition.y = carryHeightOffset;
             carriedItem.gameObject.transform.position = objectPosition;
+            if(carriedItem.GetComponent<Rigidbody>().mass >= 10)
+            {
+                firstPersonController.MoveSpeed = slowedMoveSpeed;
+            }
+        }
+        //I could probably do this better with events
+        else
+        {
+            firstPersonController.MoveSpeed = regMoveSpeed;
         }
     }
 }

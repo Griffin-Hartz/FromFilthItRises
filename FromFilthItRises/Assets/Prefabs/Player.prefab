@@ -213,9 +213,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9558bc007c989459b843d2cfd24e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {fileID: 0}
+  objectPosition: {x: 0, y: 0, z: 0}
   throwForce: 3
-  inFrontOfPlayer: {fileID: 5082673842549269639}
+  floatOffset: 1
+  grabDistance: 1
+  isCarrying: 0
+  regMoveSpeed: 4
+  slowedMoveSpeed: 2
+  spawn: {fileID: 0}
 --- !u!143 &7851982386205749435
 CharacterController:
   m_ObjectHideFlags: 0
@@ -247,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 4
-  SprintSpeed: 6
+  SprintSpeed: 9
   RotationSpeed: 1
   SpeedChangeRate: 10
   JumpHeight: 1.2

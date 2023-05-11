@@ -58,9 +58,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        int layerMask = LayerMask.GetMask("Item");
         lookRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(lookRay.origin, lookRay.direction * grabDistance);
-        Physics.Raycast(lookRay, out hitData);
+        //lookRay.direction *= grabDistance;
+        Debug.DrawRay(lookRay.origin, lookRay.direction);
+        Physics.Raycast(lookRay, out hitData, grabDistance, layerMask);
         if (!isCarrying && hitData.collider.tag == "Item")
         {
             lastSeenPickup = hitData.transform.gameObject.GetComponent<PickUp>();             

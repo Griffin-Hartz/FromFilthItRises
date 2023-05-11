@@ -1,4 +1,5 @@
 using StarterAssets;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,57 +62,65 @@ public class Player : MonoBehaviour
         int layerMask = LayerMask.GetMask("Item");
         lookRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         //lookRay.direction *= grabDistance;
-        Debug.DrawRay(lookRay.origin, lookRay.direction);
-        Physics.Raycast(lookRay, out hitData, grabDistance, layerMask);
-        if (!isCarrying && hitData.collider.tag == "Item")
+        //Debug.DrawRay(transform.position, transform.forward, Color.red, 2, depthTest:false);
+        Debug.DrawRay(lookRay.origin, lookRay.direction * grabDistance, Color.red, 10, depthTest: false);
+        Physics.Raycast(lookRay.origin, lookRay.direction, out hitData, grabDistance);
+        try
         {
-            lastSeenPickup = hitData.transform.gameObject.GetComponent<PickUp>();             
-            
-            if(!lastSeenPickup.glowing)
-                lastSeenPickup.StartGlow();
-        }
-        else if(lastSeenPickup != null)
-        {
-            lastSeenPickup.StopGlow();
-            lastSeenPickup = null;
-        }
+            if (!isCarrying && hitData.collider.tag == "Item")
+            {
+                lastSeenPickup = hitData.transform.gameObject.GetComponent<PickUp>();
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (isCarrying)
-            {
-                Drop(carriedItem);
+                if (!lastSeenPickup.glowing)
+                    lastSeenPickup.StartGlow();
             }
-            else
+            else if (lastSeenPickup != null)
             {
-                if (hitData.collider.tag == "Item")
+                lastSeenPickup.StopGlow();
+                lastSeenPickup = null;
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (isCarrying)
                 {
-                    Carry(hitData.transform.gameObject.GetComponent<PickUp>());
+                    Drop(carriedItem);
+                }
+                else
+                {
+                    if (hitData.collider.tag == "Item")
+                    {
+                        Carry(hitData.transform.gameObject.GetComponent<PickUp>());
+                    }
                 }
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (isCarrying)
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Throw(carriedItem);
+                if (isCarrying)
+                {
+                    Throw(carriedItem);
+                }
+            }
+            else if (isCarrying)
+            {
+                //make this better so it moves around in front of them
+                objectPosition = Camera.main.transform.position + Camera.main.transform.forward * floatOffset;
+                //objectPosition.y = carryHeightOffset;
+                carriedItem.gameObject.transform.position = objectPosition;
+                if (carriedItem.GetComponent<Rigidbody>().mass >= 10)
+                {
+                    firstPersonController.MoveSpeed = slowedMoveSpeed;
+                }
+            }
+            //I could probably do this better with events
+            else
+            {
+                firstPersonController.MoveSpeed = regMoveSpeed;
             }
         }
-        else if (isCarrying)
-        {
-            //make this better so it moves around in front of them
-            objectPosition = Camera.main.transform.position + Camera.main.transform.forward*floatOffset;
-            //objectPosition.y = carryHeightOffset;
-            carriedItem.gameObject.transform.position = objectPosition;
-            if(carriedItem.GetComponent<Rigidbody>().mass >= 10)
-            {
-                firstPersonController.MoveSpeed = slowedMoveSpeed;
-            }
-        }
-        //I could probably do this better with events
-        else
-        {
-            firstPersonController.MoveSpeed = regMoveSpeed;
+        catch (NullReferenceException n){
+            lastSeenPickup.StopGlow();
+            lastSeenPickup = null;
         }
     }
 }

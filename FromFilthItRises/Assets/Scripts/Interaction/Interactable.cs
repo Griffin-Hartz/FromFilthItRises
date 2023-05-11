@@ -5,33 +5,18 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    //private Collider collider;
     [SerializeField] private Collider trigger;
-    [SerializeField] private Material defaultMat;
-    [SerializeField] private Material interactionMat;
-    private MeshRenderer mesh;
+    [SerializeField] public Light lightSource;
     public Boolean needsToggled = false;
+    public bool glowing;
+    public bool needsLight;
     // Start is called before the first frame update
-    void Start()
-    {
-        try
-        {
-            //collider = GetComponent<Collider>();
-            mesh = GetComponent<MeshRenderer>();
-        }
-        catch (NullReferenceException) { }
-
-        //defaultMat = Resources.Load<Material>("Default");
-        //interactionMat = Resources.Load<Material>("Interacting");
-    }
 
     public virtual void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
         {
-            //Debug.Log("Trigger");
-            try { mesh.material = interactionMat; }
-            catch { }
+            if(needsLight)lightSource.enabled = true;
 
             if (needsToggled)
             {
@@ -43,22 +28,24 @@ public abstract class Interactable : MonoBehaviour
         }
     }
 
-    /*public virtual void OnCollisionStay(Collision collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            //Debug.Log("Collider");
-            if (Input.GetKeyDown(KeyCode.E))
-                Interact();
-        }
-    }*/
-
     public virtual void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
-            try { mesh.material = defaultMat; }
-            catch { }
+            if(needsLight)lightSource.enabled = false;
     }
 
     public virtual void Interact() { }
+
+    public void StartGlow()
+    {
+        glowing = true;
+        lightSource.enabled = true;
+    }
+
+    public void StopGlow()
+    {
+        glowing = false;
+        lightSource.enabled = false;
+    }
 }
+

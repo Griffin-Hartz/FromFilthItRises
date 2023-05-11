@@ -58,11 +58,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        int layerMask = LayerMask.GetMask("Item");
         lookRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //lookRay.direction *= grabDistance;
-        //Debug.DrawRay(transform.position, transform.forward, Color.red, 2, depthTest:false);
         Debug.DrawRay(lookRay.origin, lookRay.direction * grabDistance, Color.red, 10, depthTest: false);
         Physics.Raycast(lookRay.origin, lookRay.direction, out hitData, grabDistance);
         try
@@ -103,9 +99,7 @@ public class Player : MonoBehaviour
             }
             else if (isCarrying)
             {
-                //make this better so it moves around in front of them
                 objectPosition = Camera.main.transform.position + Camera.main.transform.forward * floatOffset;
-                //objectPosition.y = carryHeightOffset;
                 carriedItem.gameObject.transform.position = objectPosition;
                 if (carriedItem.GetComponent<Rigidbody>().mass >= 10)
                 {
@@ -119,8 +113,7 @@ public class Player : MonoBehaviour
             }
         }
         catch (NullReferenceException n){
-            lastSeenPickup.StopGlow();
-            lastSeenPickup = null;
+
         }
     }
 }

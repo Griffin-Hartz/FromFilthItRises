@@ -10,7 +10,10 @@ TagManager:
   - Floor
   - Building
   - Claw
+<<<<<<< HEAD
   - Item
+=======
+>>>>>>> EnemyAvatar
   layers:
   - Default
   - TransparentFX

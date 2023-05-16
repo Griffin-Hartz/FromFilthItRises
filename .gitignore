@@ -69,5 +69,9 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
+<<<<<<< HEAD
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 FromFilthItRises/ProjectSettings/EditorBuildSettings.asset
+=======
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+>>>>>>> EnemyAvatar

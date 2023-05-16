@@ -1,0 +1,65 @@
+{
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 499936,
+                "file_path": "results\\labcomp\\Enemy\\Enemy-499936.onnx",
+                "reward": 1.5333333015441895,
+                "creation_time": 1680117791.6288893,
+                "auxillary_file_paths": [
+                    "results\\labcomp\\Enemy\\Enemy-499936.pt"
+                ]
+            },
+            {
+                "steps": 999968,
+                "file_path": "results\\labcomp\\Enemy\\Enemy-999968.onnx",
+                "reward": 5.366666652262211,
+                "creation_time": 1680118701.3388808,
+                "auxillary_file_paths": [
+                    "results\\labcomp\\Enemy\\Enemy-999968.pt"
+                ]
+            },
+            {
+                "steps": 1499920,
+                "file_path": "results\\labcomp\\Enemy\\Enemy-1499920.onnx",
+                "reward": 6.319999960064888,
+                "creation_time": 1680119552.131894,
+                "auxillary_file_paths": [
+                    "results\\labcomp\\Enemy\\Enemy-1499920.pt"
+                ]
+            },
+            {
+                "steps": 1999936,
+                "file_path": "results\\labcomp\\Enemy\\Enemy-1999936.onnx",
+                "reward": 3.133333295583725,
+                "creation_time": 1680120400.7170322,
+                "auxillary_file_paths": [
+                    "results\\labcomp\\Enemy\\Enemy-1999936.pt"
+                ]
+            },
+            {
+                "steps": 2000448,
+                "file_path": "results\\labcomp\\Enemy\\Enemy-2000448.onnx",
+                "reward": 3.133333295583725,
+                "creation_time": 1680120400.8566647,
+                "auxillary_file_paths": [
+                    "results\\labcomp\\Enemy\\Enemy-2000448.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2000448,
+            "file_path": "results\\labcomp\\Enemy.onnx",
+            "reward": 3.133333295583725,
+            "creation_time": 1680120400.8566647,
+            "auxillary_file_paths": [
+                "results\\labcomp\\Enemy\\Enemy-2000448.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 21d2dfb72dc003d4bbbe9aaf967d14b2
+=======
+guid: bf6d13e07f57fe74489eca096aee44f0
+>>>>>>> EnemyAvatar
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

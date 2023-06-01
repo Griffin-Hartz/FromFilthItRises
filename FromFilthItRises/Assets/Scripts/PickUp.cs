@@ -6,6 +6,8 @@ using UnityEngine.Experimental.GlobalIllumination;
 [RequireComponent(typeof(Rigidbody))] 
 public class PickUp : Interactable
 {
+    [SerializeField] private Transform spawn;
+
     public override void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
@@ -20,6 +22,10 @@ public class PickUp : Interactable
             else
                 Interact();
         }
+        else if(other.tag == "ItemRespawn")
+        {
+            Respawn();
+        }
     }
 
     public override void OnTriggerExit(Collider other)
@@ -31,5 +37,11 @@ public class PickUp : Interactable
     public override void Interact()
     {
         StopGlow();
+    }
+
+    private void Respawn()
+    {
+        this.transform.position = spawn.position;
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
     }
 }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float regMoveSpeed = 4f;
     [SerializeField] private float slowedMoveSpeed = 2f;
     [SerializeField] private Transform spawn;
+    [SerializeField] private CarryingUI carryingUI;
     private Ray lookRay;
     private RaycastHit hitData;
     private PickUp carriedItem;
@@ -40,6 +41,9 @@ public class Player : MonoBehaviour
         isCarrying = true;
         carriedItem = item;
         item.StopGlow();
+
+        carryingUI.PickedUp.Invoke(carriedItem);
+
     }
 
     public void Drop(PickUp item)
@@ -101,6 +105,7 @@ public class Player : MonoBehaviour
             {
                 objectPosition = Camera.main.transform.position + Camera.main.transform.forward * floatOffset;
                 carriedItem.gameObject.transform.position = objectPosition;
+                //what if instead I just had a UI element that said "Carrying: "
                 if (carriedItem.GetComponent<Rigidbody>().mass >= 10)
                 {
                     firstPersonController.MoveSpeed = slowedMoveSpeed;

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2450454442699327981}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCameraRoot
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5082673842549269639}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: InfrontOfPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5889523855740003499}
   - component: {fileID: 5889523855740003498}
   - component: {fileID: 5889523855740003493}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5789807557425769677}
   - component: {fileID: 7851982386205749437}
   - component: {fileID: 7173573235580535424}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -221,6 +221,7 @@ MonoBehaviour:
   regMoveSpeed: 4
   slowedMoveSpeed: 2
   spawn: {fileID: 0}
+  carryingUI: {fileID: 0}
 --- !u!143 &7851982386205749435
 CharacterController:
   m_ObjectHideFlags: 0

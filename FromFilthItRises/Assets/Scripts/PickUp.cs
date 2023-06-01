@@ -34,6 +34,12 @@ public class PickUp : Interactable
             StopGlow();
     }
 
+    /*private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            GetComponent<SphereCollider>().enabled = true;
+    }*/
+
     public override void Interact()
     {
         StopGlow();

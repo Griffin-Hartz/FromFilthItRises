@@ -20,6 +20,14 @@ public class CarryingUI : MonoBehaviour
     private void UpdatePickupUI(PickUp pu)
     {
         //Debug.Log("UpdatePickupUI: " + pu.name);
-        _textMeshPro.text = "Carrying " + pu.gameObject.name;
+        if (player.isCarrying)
+        {
+            _textMeshPro.enabled = true;
+            _textMeshPro.text = "Carrying " + pu.gameObject.name;
+        }
+        else
+        {
+            _textMeshPro.enabled = false;
+        }
     }
 }

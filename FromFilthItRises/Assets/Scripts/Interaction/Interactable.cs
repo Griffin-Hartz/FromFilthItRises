@@ -24,7 +24,7 @@ public abstract class Interactable : MonoBehaviour
                     Interact();
             }
             else
-                Interact();
+                Interact(); 
         }
     }
 

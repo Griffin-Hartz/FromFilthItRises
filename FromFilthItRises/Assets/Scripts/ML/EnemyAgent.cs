@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -36,6 +31,9 @@ public class EnemyAgent : Agent
 
     [Tooltip("The color when the run is invalid")]
     public Color invalidColor;
+
+    public int[] heightRange;
+    public int[] radiusRange;
 
     [SerializeField] private Material enemyMaterial;
 
@@ -309,10 +307,10 @@ public class EnemyAgent : Agent
             else
             {
                 // Pick a random height from the ground
-                float height = UnityEngine.Random.Range(1.2f, 2.5f);
+                float height = UnityEngine.Random.Range(heightRange[0], heightRange[1]);
 
                 // Pick a random radius from the center of the area
-                float radius = UnityEngine.Random.Range(2f, 7f);
+                float radius = UnityEngine.Random.Range(radiusRange[0], radiusRange[1]);
 
                 // Pick a random direction rotated around the y axis
                 Quaternion direction = Quaternion.Euler(0f, UnityEngine.Random.Range(-180f, 180f), 0f);

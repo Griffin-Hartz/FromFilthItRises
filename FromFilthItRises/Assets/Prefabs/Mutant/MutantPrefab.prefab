@@ -717,7 +717,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 1c5cd44e565088344900679f483dd325, type: 3}
   m_Controller: {fileID: 9100000, guid: 19d9f6fe5f0dea647abcac8f0431de6e, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -779,6 +779,8 @@ MonoBehaviour:
   trainingMode: 1
   validColor: {r: 0, g: 0, b: 0, a: 0}
   invalidColor: {r: 0, g: 0, b: 0, a: 0}
+  heightRange: 0000000001000000
+  radiusRange: 0200000007000000
   enemyMaterial: {fileID: 2100000, guid: 25dc0405e868953439fe5fcdbc2e9787, type: 2}
   nearestPlayer: {fileID: 0}
 --- !u!114 &2600843453438979290

@@ -323,3 +323,4 @@ MonoBehaviour:
   glowing: 0
   needsLight: 1
   _textMeshPro: {fileID: 0}
+  print: 0

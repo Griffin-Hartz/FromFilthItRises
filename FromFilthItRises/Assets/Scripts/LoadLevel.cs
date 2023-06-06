@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
+    public GameObject panel;
     public int SceneIndex;
 
     public void OnCollisionEnter(Collision collision)
@@ -28,5 +29,12 @@ public class LoadLevel : MonoBehaviour
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+    }
+
+    //Load from menu
+    public void LoadSceneAdditive(int index)
+    {
+        SceneManager.LoadScene(index, LoadSceneMode.Additive);
+        panel.SetActive(false);
     }
 }

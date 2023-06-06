@@ -560,6 +560,7 @@ MonoBehaviour:
   isAlive: 0
   spawnPositions:
   - {fileID: 851905121}
+  spawnPositionsobj: {fileID: 0}
 --- !u!65 &851905118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1057,6 +1058,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mutant.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462994869556877689, guid: 381db8fe8d004094f8b41bc117a755f4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 19d9f6fe5f0dea647abcac8f0431de6e, type: 2}
+    - target: {fileID: 8462994869556877689, guid: 381db8fe8d004094f8b41bc117a755f4,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462994869556877689, guid: 381db8fe8d004094f8b41bc117a755f4,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
+        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform 'mixamorig:RightHandIndex3'\n\tTransform
+        'mixamorig:RightFoot'\n\tTransform 'mixamorig:Head'\n\tand more ...\n\tFrom
+        animation clip 'MutantIdle'"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381db8fe8d004094f8b41bc117a755f4, type: 3}

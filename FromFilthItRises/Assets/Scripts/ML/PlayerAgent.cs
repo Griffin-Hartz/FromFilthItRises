@@ -24,6 +24,7 @@ public class PlayerAgent : MonoBehaviour
     public bool isAlive;
 
     [SerializeField] private Transform[] spawnPositions;
+    [SerializeField] private Transform spawnPositionsobj;
 
     /// <summary>
     /// A vector pointing straight out of the player
@@ -170,5 +171,7 @@ public class PlayerAgent : MonoBehaviour
         // Find player collider
         if(playerCollider == null)
             playerCollider = transform.Find("PlayerCollider").GetComponent<Collider>();
+
+        spawnPositions = spawnPositionsobj.GetComponentsInChildren<Transform>();
     }
 }

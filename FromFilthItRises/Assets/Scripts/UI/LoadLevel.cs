@@ -28,13 +28,13 @@ public class LoadLevel : MonoBehaviour
 
     public void LoadScene(int index)
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadSceneAsync(index);
     }
 
     //Load from menu
     public void LoadSceneAdditive(int index)
     {
-        SceneManager.LoadScene(index, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
         panel.SetActive(false);
     }
 }

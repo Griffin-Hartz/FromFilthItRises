@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8657129431328044866}
   m_Layer: 0
   m_Name: RoomWall
-  m_TagString: Untagged
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,9 +50,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -121,9 +157,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -192,9 +264,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -263,9 +371,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.20
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -334,9 +478,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.10
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -405,9 +585,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -476,9 +692,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -547,9 +799,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -618,9 +906,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -689,9 +1013,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -760,9 +1120,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder
@@ -831,9 +1227,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657129431328044866}
     m_Modifications:
+    - target: {fileID: 106944, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154658, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154714, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 154936, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 156074, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
     - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_Name
       value: wall_outer_10m.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 168598, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 181696, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
+      objectReference: {fileID: 0}
+    - target: {fileID: 192544, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
+      propertyPath: m_TagString
+      value: Boundary
       objectReference: {fileID: 0}
     - target: {fileID: 417344, guid: 20f342ab55865934bbb5caade178fa2b, type: 3}
       propertyPath: m_RootOrder

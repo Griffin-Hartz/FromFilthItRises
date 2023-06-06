@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4246881398530095999}
   m_Layer: 0
   m_Name: buidling_d
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 4246881398926185520}
   m_Layer: 0
   m_Name: inside_decals
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 4246881398954068844}
   m_Layer: 0
   m_Name: outside_props
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 4246881399377113795}
   m_Layer: 0
   m_Name: roof
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 4246881399547910832}
   m_Layer: 0
   m_Name: outside
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967279
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 4246881399563543953}
   m_Layer: 0
   m_Name: inside_props
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 4246881399671883120}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 4246881399748703726}
   m_Layer: 0
   m_Name: lights
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 4246881400177682633}
   m_Layer: 0
   m_Name: outside_decals
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 4246881400266120584}
   m_Layer: 0
   m_Name: inside
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1390,6 +1390,10 @@ PrefabInstance:
       value: wall_5x5_a (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -1891,6 +1895,10 @@ PrefabInstance:
       value: wall_5x5_a (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2021,6 +2029,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4246881400266120584}
     m_Modifications:
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2079,6 +2091,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2911,6 +2927,10 @@ PrefabInstance:
       value: wall_5x5_a (12)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -3464,6 +3484,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4263,6 +4287,10 @@ PrefabInstance:
       value: floor_5x5_03_up (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -4356,7 +4384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010685719488, guid: dce6289c8e1b3bd4a8cc69cbbe51e2d1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010831306986, guid: dce6289c8e1b3bd4a8cc69cbbe51e2d1, type: 3}
       propertyPath: m_RootOrder
@@ -4404,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012505485424, guid: dce6289c8e1b3bd4a8cc69cbbe51e2d1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000013360849872, guid: dce6289c8e1b3bd4a8cc69cbbe51e2d1, type: 3}
       propertyPath: m_RootOrder
@@ -5094,6 +5122,10 @@ PrefabInstance:
       value: wall_5x5_a (9)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -5218,6 +5250,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5420,6 +5456,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5701,6 +5741,10 @@ PrefabInstance:
       value: door_e_frame (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010979813210, guid: 23096b67613fdf04faa7600cc661d919, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010979813210, guid: 23096b67613fdf04faa7600cc661d919, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -5853,6 +5897,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4246881399671883120}
     m_Modifications:
     - target: {fileID: 1000010017124098, guid: fee9ff67644712c4e9a71abd7e5a713f, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010017124098, guid: fee9ff67644712c4e9a71abd7e5a713f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -5968,6 +6016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4246881399671883120}
     m_Modifications:
+    - target: {fileID: 1000013907576366, guid: 73629585737e6c249825f9f2be9ebc82, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013907576366, guid: 73629585737e6c249825f9f2be9ebc82, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -6102,6 +6154,10 @@ PrefabInstance:
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_Name
       value: column_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6498,6 +6554,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7185,6 +7245,10 @@ PrefabInstance:
       value: column_b (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -7538,6 +7602,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4246881400266120584}
     m_Modifications:
     - target: {fileID: 1000012055133804, guid: 741069103514c19449bc4987e26fb103, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012055133804, guid: 741069103514c19449bc4987e26fb103, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -7687,6 +7755,10 @@ PrefabInstance:
     - target: {fileID: 1000011951239550, guid: 09cfb7dc4b7cc8e4bbcae16547445cc8, type: 3}
       propertyPath: m_Name
       value: window_c_inside_variant_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011951239550, guid: 09cfb7dc4b7cc8e4bbcae16547445cc8, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000011951239550, guid: 09cfb7dc4b7cc8e4bbcae16547445cc8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7907,6 +7979,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4246881399671883120}
     m_Modifications:
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -7965,6 +8041,10 @@ PrefabInstance:
     - target: {fileID: 1000012055133804, guid: 741069103514c19449bc4987e26fb103, type: 3}
       propertyPath: m_Name
       value: window_c_inside_variant_c (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012055133804, guid: 741069103514c19449bc4987e26fb103, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000012055133804, guid: 741069103514c19449bc4987e26fb103, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8512,6 +8592,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4246881400266120584}
     m_Modifications:
     - target: {fileID: 100000, guid: 247dea291ed41274a956c2fcd845977d, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 247dea291ed41274a956c2fcd845977d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -8881,6 +8965,10 @@ PrefabInstance:
       value: wall_5x5_a (10)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -9125,6 +9213,10 @@ PrefabInstance:
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_Name
       value: column_b (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000012737415856, guid: 134aed1c450414241bde68a39b23bc8a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10023,6 +10115,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11258,6 +11354,10 @@ PrefabInstance:
       value: floor_5x5_03_up (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -11646,6 +11746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4246881400266120584}
     m_Modifications:
+    - target: {fileID: 1000010272208396, guid: bdf4e1ae9c8648443af74f35314aa3f3, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
     - target: {fileID: 1000010272208396, guid: bdf4e1ae9c8648443af74f35314aa3f3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -12299,6 +12403,10 @@ PrefabInstance:
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_Name
       value: floor_5x5_03_up (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13025,6 +13133,10 @@ PrefabInstance:
       value: wall_5x5_a (12)
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -13490,6 +13602,10 @@ PrefabInstance:
       value: floor_5x5_03_up (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -13941,6 +14057,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1000011951239550, guid: 09cfb7dc4b7cc8e4bbcae16547445cc8, type: 3}
+      propertyPath: m_TagString
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011951239550, guid: 09cfb7dc4b7cc8e4bbcae16547445cc8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -13999,6 +14119,10 @@ PrefabInstance:
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_Name
       value: wall_5x5_a (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
+      propertyPath: m_TagString
+      value: Building
       objectReference: {fileID: 0}
     - target: {fileID: 1000010177369090, guid: 9e68897f43abac142a8e977c00947e22, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14740,6 +14864,10 @@ PrefabInstance:
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_Name
       value: floor_5x5_03_up (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 1000011213759730, guid: 094ab3c801ff96c48bdaff86d480a6e7, type: 3}
       propertyPath: m_StaticEditorFlags

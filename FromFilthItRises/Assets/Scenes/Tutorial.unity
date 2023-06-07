@@ -3533,7 +3533,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2054238809}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c9558bc007c989459b843d2cfd24e76, type: 3}
   m_Name: 
@@ -25936,6 +25936,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1877697870}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1887476837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5036778751479762608, guid: 2ebf1420b41479146aa11eced7eb5b49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915683293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1897378612
 GameObject:
   m_ObjectHideFlags: 3
@@ -26030,6 +26036,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1465219498}
     m_Modifications:
+    - target: {fileID: 3159551157772299943, guid: 2ebf1420b41479146aa11eced7eb5b49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580154807956687236, guid: 2ebf1420b41479146aa11eced7eb5b49,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 431785260}
+    - target: {fileID: 4580154807956687236, guid: 2ebf1420b41479146aa11eced7eb5b49,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1887476837}
+    - target: {fileID: 5036778751479762608, guid: 2ebf1420b41479146aa11eced7eb5b49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6240648795997983487, guid: 2ebf1420b41479146aa11eced7eb5b49,
         type: 3}
       propertyPath: m_Name
@@ -30038,6 +30064,11 @@ PrefabInstance:
       objectReference: {fileID: 1468471131}
     - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823804864405907018, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
       propertyPath: carryingUI
       value: 
       objectReference: {fileID: 889546662}
@@ -30131,12 +30162,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7851982386205749430, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851982386205749435, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7851982386205749437, guid: 0624bd641ad450c42b61ee42af18aae5,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1992403530}
-    m_RemovedComponents: []
+    - target: {fileID: 7851982386205749437, guid: 0624bd641ad450c42b61ee42af18aae5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7173573235580535424, guid: 0624bd641ad450c42b61ee42af18aae5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0624bd641ad450c42b61ee42af18aae5, type: 3}
 --- !u!1001 &2055882063
 PrefabInstance:
@@ -31082,10 +31129,15 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1060483407496293579, guid: 6741eed118fd2644eb8581aca549ae43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3856532546404347158, guid: 6741eed118fd2644eb8581aca549ae43,
         type: 3}
       propertyPath: m_Mass
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7100321091046944671, guid: 6741eed118fd2644eb8581aca549ae43,
         type: 3}
@@ -31146,6 +31198,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HeavyPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355335610394780319, guid: 6741eed118fd2644eb8581aca549ae43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355335610394780319, guid: 6741eed118fd2644eb8581aca549ae43,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 305321573246908182, guid: 6741eed118fd2644eb8581aca549ae43, type: 3}

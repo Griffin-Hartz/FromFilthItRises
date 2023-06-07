@@ -15,7 +15,7 @@ public class JammedGate : Gate
         Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
         //Impact by heavy object
         Debug.Log(collision.gameObject.name + "collision ");
-        if(rb.mass >= 10 && rb.velocity.magnitude >= 1f)
+        if(rb.gameObject.name == "HeavyPickup")//(rb.mass >= 10 && rb.velocity.magnitude >= 1f)
         {
             Interact();
         }

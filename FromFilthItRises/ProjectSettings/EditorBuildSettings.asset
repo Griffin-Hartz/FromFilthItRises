@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 0971eecf1a947ad43bf325ddab490166
   - enabled: 1
+    path: Assets/Scenes/RuinsDownscale.unity
+    guid: 2ee6c2eef0683d541930ae2c99c1b00b
+  - enabled: 1
     path: Assets/Scenes/Ruins.unity
     guid: 9a95492a6a5d1774aa5b450d92eeecec
   m_configObjects:

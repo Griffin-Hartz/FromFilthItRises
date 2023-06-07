@@ -1,0 +1,29 @@
+{
+    "Enemy": {
+        "checkpoints": [
+            {
+                "steps": 296767,
+                "file_path": "results\\RuinsTraining\\Enemy\\Enemy-296767.onnx",
+                "reward": -0.10000000149011612,
+                "creation_time": 1686100407.4054577,
+                "auxillary_file_paths": [
+                    "results\\RuinsTraining\\Enemy\\Enemy-296767.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 296767,
+            "file_path": "results\\RuinsTraining\\Enemy.onnx",
+            "reward": -0.10000000149011612,
+            "creation_time": 1686100407.4054577,
+            "auxillary_file_paths": [
+                "results\\RuinsTraining\\Enemy\\Enemy-296767.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.13.1"
+    }
+}
